@@ -4,7 +4,9 @@ Salient object detection is evaluated using binary ground truth with the labels 
 
 # The SalMoN Dataset
 
-Google Drive link to [the SalMoN Dataset](https://drive.google.com/file/d/1C4tE-j7yvCo88n1qXLlmw_o160QHEOhE/view?usp=sharing)
+(**Additional files are added to run our [evaluation code](https://github.com/gokyildirim/salmon_dataset/blob/master/evaluation_code.ipynb). Please re-download the dataset if you have an older copy.**)
+
+Google Drive link to [the SalMoN Dataset](https://drive.google.com/file/d/1C4tE-j7yvCo88n1qXLlmw_o160QHEOhE/view?usp=sharing). 
 
 You can browse the images and the saliency maps by clicking on the "viewDataset.html" inside the dataset file. A sample from our dataset is shown below:
 
@@ -12,11 +14,15 @@ You can browse the images and the saliency maps by clicking on the "viewDataset.
 |-|-|-|-|-|
 |![](example_images/0116.jpg)|![](example_images/0116_fd.png)|![](example_images/0116_et.png)|![](example_images/0116_pc.png)|![](example_images/0116_rd.png)|
 
-You can analyze various data modalities (point clicks, rectangle coordinates etc.) by loading the following file in Python (tested in Python 3.6, with pickle :
+You can analyze various data modalities (point clicks, rectangle coordinates etc.) by loading the following file in Python (tested in Python 3.6, with pickle):
 
 ```
 import pickle
 
 data = pickle.load(open("multilevel_saliency_data.pkl", "rb"))
 ```
+
+# The Code for Calculating AUC, MAE, Kendall's Tau
+
+Please refer to the [ipython notebook](https://github.com/gokyildirim/salmon_dataset/blob/master/evaluation_code.ipynb) to use/modify the evaluation code.
 
